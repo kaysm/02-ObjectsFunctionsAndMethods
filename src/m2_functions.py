@@ -25,10 +25,12 @@ def main():
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
     """
-
+    print(pythag(3, 4))
+    tutle(30, 'red')
+    tutle(6, 'blue')
 
 ###############################################################################
-# TODO: 3a.  Define a function immediately below this _TODO_.
+# DONE: 3a.  Define a function immediately below this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -36,14 +38,18 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
+def pythag(a, b):
+    c =((a**2)+(b**2))**(1/2)
+    return c
+
 
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -54,21 +60,26 @@ def main():
 #          - one has a Pen whose color is "green" and has the GIVEN thickness
 #        - - the other has a Pen whose color is the GIVEN color
 #              and whose thickness is 5
-#
 #        Note: the "GIVEN" color means the PARAMETER that represents a color.
 #        Likewise, the "GIVEN" thickness means the PARAMETER for thickness.
-#
 #     c. Makes the first (green) SimpleTurtle move FORWARD 100 pixels, and
 #        makes the other (thickness 5) SimpleTurtle move BACKWARD 100 pixels.
-#
 #     d. Tells the TurtleWindow to wait until the mouse is clicked.
-#
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
+def tutle(a, b):
+    window=rg.TurtleWindow()
+    at = rg.SimpleTurtle()
+    at.pen = rg.Pen('green', a)
+    bt = rg.SimpleTurtle()
+    bt.pen = rg.Pen(b, 5)
+    at.forward(100)
+    bt.backward(100)
+    window.close_on_mouse_click()
 
 
 ###############################################################################
@@ -97,3 +108,4 @@ def main():
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
 main()
+
