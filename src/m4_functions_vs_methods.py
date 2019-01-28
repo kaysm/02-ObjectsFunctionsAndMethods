@@ -216,7 +216,7 @@ def try_methods_and_functions():
     draw_many_squares(alan, 8, 300, 60)
     alan.pen = rg.Pen('black', 3)
     alan.backward(200)
-
+    alan.draw_circle(30)
     draw_many_squares(alan, 1, 50, 0)
 
 
