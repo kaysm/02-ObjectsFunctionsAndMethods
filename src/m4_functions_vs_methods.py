@@ -134,9 +134,15 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
+    turtle = rg.SimpleTurtle('square')
+    turtle.pen = rg.Pen('brown', 5)
+    turtle.forward(150)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.backward(100)
 
 
 ###############################################################################
@@ -150,7 +156,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #    NOTE: This function requires
@@ -158,6 +164,9 @@ def try_functions():
     #    If you think it needs more, ** ASK FOR HELP. **
     #    HINT: see   jump_and_move_turtle   above.
     ###########################################################################
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
 
 
 ###############################################################################
@@ -169,40 +178,46 @@ def try_methods_and_functions():
     that is 'blue' with thickness 5.
 
     Then makes the SimpleTurtle do the following (in the order listed):
-
       1. Go  backward  150 units.
-
       2. Change its speed to 1 (slowest).
          Draw 2 squares whose size (width and height) are 100,
          each "twisted" from the previous by 30 degrees.
-
       3. Change its speed to 5 (faster).
          Change its Pen's color to 'red'.
          Draw 10 squares whose size (width and height) are 50,
          each "twisted" from the previous by 15 degrees.
-
       4. Change its speed to 100 (about the fastest possible).
          Change its Pen's thickness to 35.
          Draw 8 squares whose size (width and height) are 300,
          each "twisted" from the previous by 60 degrees.
-
       5. Change its Pen to be a NEW Pen whose color is 'black'
          and whose thickness is 3.
-
       6. Go backward  200 units.
-
       7. Draw a CIRCLE whose radius is 30.
-
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ###########################################################################
-    # TODO: 6. Implement and test this function, per its doc-string above.
+    # DONE: 6. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
     #     draw_many_squares
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     ###########################################################################
+    alan = rg.SimpleTurtle()
+    alan.pen = rg.Pen('blue', 5)
+    alan.backward(150)
+    alan.speed = 1
+    draw_many_squares(alan, 2, 100, 30)
+    alan.speed = 5
+    draw_many_squares(alan, 10, 50, 15)
+    alan.speed = 100
+    alan.pen.thickness = 35
+    draw_many_squares(alan, 8, 300, 60)
+    alan.pen = rg.Pen('black', 3)
+    alan.backward(200)
+
+    draw_many_squares(alan, 1, 50, 0)
 
 
 # -----------------------------------------------------------------------------
